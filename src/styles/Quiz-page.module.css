@@ -1,0 +1,113 @@
+/* styles/quiz-page.module.css */
+
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.quiz-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.question-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.question-number:hover {
+  background-color: #f0f0f0;
+}
+
+.question-number.selected {
+  background-color: #66bb6a; /* Green background for selected tab */
+  color: #fff;
+}
+
+.question-number.visited {
+  background-color: #000; /* Black background for visited and answered tab */
+  color: #fff;
+}
+
+.question-number.unanswered {
+  background-color: #e57373; /* Red background for visited but unanswered tab */
+  color: #fff;
+}
+
+.question {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.answer-options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.answer-option {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answer-option:hover {
+  background-color: #f0f0f0;
+}
+
+.answer-option.selected {
+  background-color: #a0e57c; /* Green background for selected option */
+  color: #fff;
+}
+
+.submit-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.timer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  color: red;
+}

@@ -1,4 +1,5 @@
 {
+  "homepage": "http://ankitmudia.github.io/test-deployment",
   "name": "quiz-app",
   "version": "0.1.0",
   "private": true,
@@ -6,11 +7,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.5.0",
     "next": "13.4.19",
+    "next-remove-imports": "^1.0.12",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.1.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
