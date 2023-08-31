@@ -5,6 +5,9 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  min-height: 100vh; /* Make sure the container takes at least the full viewport height */
+  justify-content: space-between; /* Vertically align items at the start and end of the container */
+  padding-bottom: 20px;
 }
 
 .heading {
@@ -88,10 +91,11 @@
 }
 
 .submit-button {
-  position: absolute;
+  /* position: absolute; */
   bottom: 20px;
   right: 20px;
-  padding: 10px 20px;
+  padding: 12px 20px;
+  /* width: 80px; */
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -104,10 +108,21 @@
   background-color: #0056b3;
 }
 
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .timer {
   position: absolute;
   top: 20px;
   right: 20px;
   font-size: 18px;
   color: red;
+}
+
+.welcome-message {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
 }

@@ -7,13 +7,13 @@ import { setAnswers } from "../../store/quizSlice";
 export default function QuizPage() {
   const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(0);
   const data = useSelector((state) => state.quiz.questions);
+  const userName = useSelector((state) => state.quiz.usersEmail);
   const [questions, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [timer, setTimer] = useState(1800); // 30 minutes in seconds
   const router = useRouter();
   const dispatch = useDispatch();
-
   const setQuestionsData = (data) => {
     if (data && data.initialData) {
       const newQuestions = data.initialData.map((item) => ({
@@ -83,15 +83,14 @@ export default function QuizPage() {
     <div className={styles["quiz-page"]}>
       <div className={styles["timer"]}>{formatTime(timer)}</div>
       <div className={styles["quiz-container"]}>
-        <div className={styles["question-nav"]}>
-          Instructions:
-        </div>
+        <div className={styles["welcome-message"]}>Welcome, {userName}!</div>
+        <div className={styles["question-nav"]}>Instructions:</div>
         <div className={styles["question"]}>
-          1. All Questions are Mandatory. <br/>
-          2. If question Attempted then black color. <br/>
-          3. If visited but not Attempted then red color. <br/>
-          4. If on question tab then green color. <br/>
-          4. Finish all 15 Questions before timer on the right ends. <br/>
+          1. All Questions are Mandatory. <br />
+          2. If question Attempted then black color. <br />
+          3. If visited but not Attempted then red color. <br />
+          4. If on question tab then green color. <br />
+          4. Finish all 15 Questions before timer on the right ends. <br />
         </div>
       </div>
       <h1 className={styles["heading"]}>Quiz Questions</h1>
@@ -138,6 +137,8 @@ export default function QuizPage() {
               )
             )}
         </ul>
+      </div>
+      <div className={styles["submit-button-container"]}>
         <button className={styles["submit-button"]} onClick={handleSubmit}>
           Submit
         </button>
