@@ -1,5 +1,5 @@
 Simple Quiz Application - JOSH-TALKS
-
+Kindly Use the latest deployed application under Deployements or use this link -> https://josh-talks-8pot.vercel.app/ 
 ## Getting Started
 
 First, run the development server:
