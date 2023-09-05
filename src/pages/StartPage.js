@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import style from '../styles/Start-page.module.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { setQuestions, setUsersEmail } from '../../store/quizSlice';
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import style from "../styles/Start-page.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { setQuestions, setUsersEmail } from "../../store/quizSlice";
 
 export default function StartPage(props) {
   const router = useRouter();
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const dispatch = useDispatch();
 
   const handleEmailChange = (event) => {
@@ -14,7 +14,7 @@ export default function StartPage(props) {
   };
 
   const validateEmail = (email) => {
-    // Simple email validation (you can use a more robust validation approach)
+    // Simple email validation
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return pattern.test(email);
   };
@@ -24,14 +24,14 @@ export default function StartPage(props) {
       // Send data to the store
       dispatch(setUsersEmail(email));
       dispatch(setQuestions(props.data));
-      router.push('/QuizPage');
+      router.push("/QuizPage");
     } else {
-      alert('Please enter a valid email address.');
+      alert("Please enter a valid email address.");
     }
   };
 
   return (
-    <div className={style['start-page']}>
+    <div className={style["start-page"]}>
       <h1>Welcome to the Quiz App!</h1>
       <input
         type="email"

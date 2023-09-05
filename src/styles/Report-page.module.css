@@ -58,3 +58,26 @@
     margin-top: 5px;
   }
   
+  .submit-button {
+    /* position: absolute; */
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    /* width: 80px; */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }

@@ -81,7 +81,9 @@ export default function QuizPage() {
 
   return (
     <div className={styles["quiz-page"]}>
-      <div className={styles["timer"]}>{formatTime(timer)}</div>
+      <div className={styles["timer-container"]}>
+        <div className={styles["timer"]}>{formatTime(timer)}</div>
+      </div>
       <div className={styles["quiz-container"]}>
         <div className={styles["welcome-message"]}>Welcome, {userName}!</div>
         <div className={styles["question-nav"]}>Instructions:</div>
