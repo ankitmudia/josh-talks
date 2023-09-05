@@ -1,12 +1,10 @@
-/* styles/quiz-page.module.css */
-
 .quiz-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  min-height: 100vh; /* Make sure the container takes at least the full viewport height */
-  justify-content: space-between; /* Vertically align items at the start and end of the container */
+  min-height: 100vh;
+  justify-content: space-between;
   padding-bottom: 20px;
 }
 
@@ -55,17 +53,17 @@
 }
 
 .question-number.selected {
-  background-color: #66bb6a; /* Green background for selected tab */
+  background-color: #66bb6a;
   color: #fff;
 }
 
 .question-number.visited {
-  background-color: #000; /* Black background for visited and answered tab */
+  background-color: #000;
   color: #fff;
 }
 
 .question-number.unanswered {
-  background-color: #e57373; /* Red background for visited but unanswered tab */
+  background-color: #e57373;
   color: #fff;
 }
 
@@ -94,16 +92,14 @@
 }
 
 .answer-option.selected {
-  background-color: #a0e57c; /* Green background for selected option */
+  background-color: #a0e57c;
   color: #fff;
 }
 
 .submit-button {
-  /* position: absolute; */
   bottom: 20px;
   right: 20px;
   padding: 12px 20px;
-  /* width: 80px; */
   background-color: #007bff;
   color: #fff;
   border: none;

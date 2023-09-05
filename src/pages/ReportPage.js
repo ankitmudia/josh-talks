@@ -28,9 +28,7 @@ export default function ReportPage() {
   };
 
   const handlePlayAgain = () => {
-    // Reload the application to return to the main page
     router.push("/");
-    // window.location.reload();
   };
 
   return (
@@ -62,7 +60,7 @@ export default function ReportPage() {
         </ul>
         <div className={styles["submit-button-container"]}>
           <button className={styles["submit-button"]} onClick={handlePlayAgain}>
-            Submit
+            Play Again  
           </button>
         </div>
       </div>
